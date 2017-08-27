@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0"/>
+    <title>搜索结果页</title>
+    <link type="text/css" rel="stylesheet"  href="../styles/common/search.css" />
+</head>
+<body>
+<div class="forCenter  searchBox" >
+    <div class="searchMark">当前位置：<a href="/">首页</a>&gt;&gt;站内搜索</div>
+    <table class="searchLayout" cellspacing="0" cellpadding="0"  border="0" align="center">
+        <!-- 表单区　开始 -->
+        <tr>
+            <td>
+                <form action="searchResultGJ.jsp" name="form1" id="form1" method="get">
+                    <span id="search_form_span" class="hidden"></span>
+                    <input type="hidden" value="10" name="t_id" />
+                    <input type="hidden" value="CMSza" name="site_id" />
+                    <label class="colorC00">关键字：</label>
+                    <input type="text" id="q2" name="q2"   class="textInput" />
+                    <div class="wrap-changeLine">
+                     <input name="" type="button" onclick="submitForm()" class="submit" value="二次搜索" />
+                     <input name="" type="button" onclick="window.location.href('/search/search.jsp?t_id=11')" class="submit"  value="高级搜索" />
+                    </div>
+                </form>
+            </td>
+        </tr>
+        <!-- 表单区　结束 -->
+        <tr>
+            <td height="40" colspan="2" align="left" class="indent5" >搜索关键字"<font color="#CC0033">${result.key}</font>",用时<font color="#CC0033">${result.time}</font>秒
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <!-- 结果列表区　开始 -->
+                <div class="result">
+                    #if($result.count==0)
+                    <div><span class="colorC00">没有要搜索的结果！</span></div>
+                    #end
+                    #foreach( $item in ${result.items} )
+                    <div>【${item.category_name}】<a href='${item.url}' target="_blank">${item.title}</a></div>
+                    <div><span>时间：${item.time}</span></div>
+                    <div>${item.content}</div>
+                    <div><span >${item.url}</span></div>
+                    #end
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td height="30px" colspan="2" align="center" class="current_pos">
+                #if($result.count != 0)
+                共　${result.pageControl.maxRowCount}　条信息　
+                共　${result.pageControl.maxPage}　页　
+                第　${result.pageControl.curPage}　页　
+                <a href="#"  onclick="javascript:fnTurnPage('first' ,'${result.pageControl.curPage}','${result.pageControl.maxPage}','${result.pageControl.rowsPerPage}')" hidefocus="true">首页</a>　<a href="#" onclick="javascript:fnTurnPage('previous' ,'${result.pageControl.curPage}','${result.pageControl.maxPage}','${result.pageControl.rowsPerPage}')" hidefocus="true">上一页</a>　
+                <a href="#" onclick="javascript:fnTurnPage('next' ,'${result.pageControl.curPage}','${result.pageControl.maxPage}','${result.pageControl.rowsPerPage}')" hidefocus="true">下一页</a>　<a href="#" onclick="javascript:fnTurnPage('last' ,'${result.pageControl.curPage}','${result.pageControl.maxPage}','${result.pageControl.rowsPerPage}')" hidefocus="true">末 页</a>　
+                #end
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0"/>
+    <title>通用新闻页</title>
+    <link type="text" rel="stylesheet" href="../styles/common/content.css"/>
+</head>
+<body>
+<div class="forCenter content">
+    <div class="mark"><span class="conMark1">当前位置：</span>
+        <span class="conMark1"><a href="javascript:void(0);">首页</a></span>
+        <span class="conMark1"><a href="javascript:void(0);">新闻中心</a></span>
+        <span class="conMark1"><a href="javascript:void(0);">本地要闻</a></span>
+        <span class="conMark2">正文</span>
+    </div>
+    <div class="contentBox">
+        <div class="contentRight" id="contentRight">
+            <div class="shareBox">
+                <div id="qrcode" class="qrcode"></div>
+                <div class="share">
+                    <div id="bdshare" class="bdshare_t bds_tools_24 get-codes-bdshare">
+                        <a class="bds_tqq"></a>
+                        <a class="bds_tsina"></a>
+                        <a class="bds_qzone"></a>
+                        <a class="bds_renren"></a>
+                        <a class="bds_douban"></a>
+                        <a class="bds_tqf"></a>
+                        <a class="bds_qq"></a>
+                        <span class="bds_more"></span>
+                        <a class="shareCount"></a></div>
+                    <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=713545"></script>
+                    <script type="text/javascript" id="bdshell_js"></script>
+                    <script type="text/javascript">
+                        document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
+                    </script>
+                </div>
+            </div>
+            <div class="others">
+                <a href="javascript:void(0);" id="wide">宽屏浏览</a>
+                <a href="javascript:window.print();">打印本页</a>
+                <a href="#" target="_blank">纠错</a>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="narrow" id="narrow">窄屏浏览</a>
+
+        <div class="contentLeft">
+            <h1>县政府专题研究提升重泉古城及盛鑫温泉水寨景区环境保障工作</h1>
+
+            <div class="infoMark">
+                <span>发布时间：2016-02-24</span>
+                <span>来源：政府办</span>
+                <span>作者：马红</span>
+                <span>审核人：</span>
+            </div>
+            <div class="info">
+                <p style="text-indent:2em;">
+                    2月22日下午，县政府召开专题会议，研究重泉古城及盛鑫温泉水寨景区环境保障工作。县委常委、常务副县长张毅锋，
+                    副县长焦小忠及政府办、公安局、工商局、物价局、环保局、孙镇政府等单位负责人参加会议。会议由焦小忠主持。</p>
+
+                <p style="text-indent:2em;">
+                    会议在分别听取孙镇政府及两个项目运营情况汇报后，重点围绕景区交通秩序、停车秩序、环境卫生、通信、供水、治安
+                    保障等进行了充分讨论，明确了工作任务和具体要求。</p>
+
+                <p style="text-indent:2em;">
+                    张毅锋指出，一要高度重视。重泉古城及盛鑫温泉水寨项目是我县对外的形象窗口，对提升孙镇重点镇发展水平，丰富我
+                    县文化旅游内涵，带动第三产业发展具有重要意义。各相关单位要站在服务企业、服务发展的高度，各司其职，紧密配合，
+                    优质服务，努力解决好项目运营中出现的问题。二要明确任务。要夯实工作责任，强化部门协同配合，切实解决好交通秩序、
+                    停车秩序、环境卫生、通信保障、供水保障、治安保障等问题，着力提升景区服务承载力和服务水平。三要明确时限。各责任
+                    部门要严格按照时限要求，勇于担当，主动作为，尽快拿出合理的实施方案，圆满完成工作任务。四要加强督查。县政府督查
+                    室、效能办要强化督促检查，定期通报督查情况，确保各项工作得到有效落实。</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    //宽窄屏切换
+    var oCr = document.getElementById("contentRight");
+    var oWide = document.getElementById("wide");
+    var oNarrow = document.getElementById("narrow");
+    var timer1;
+    var p = oCr.offsetWidth, viewWidth = p;
+
+    function changeCR(ratio) {
+        p = p + ratio * 4;
+        oCr.style.width = p + "px";
+        if (p > viewWidth || p < 0) {
+            clearInterval(timer1);
+        }
+    }
+    oWide.onclick = function () {
+        timer1 = setInterval("changeCR(-1)", 10);
+        oNarrow.style.display = "block";
+    };
+    oNarrow.onclick = function () {
+        timer1 = setInterval("changeCR(1)", 10);
+        oNarrow.style.display = "none";
+    }
+</script>
+<!-- 生成二维码-->
+<script src="/js/base/qrcode.js" type="text/javascript"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            width: 120,//设置宽高
+            height: 120
+        });
+        qrcode.makeCode(document.URL);// 提交网页url
+//        document.getElementById("send").onclick =function(){  点击生成二维码
+//            qrcode.makeCode(document.getElementById("getval").value);
+//        }
+    }
+</script>
+<!-- 生成二维码 结束-->

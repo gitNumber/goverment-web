@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+
+/* 通用搜索模块样式：
+*  包括: /高级搜索页
+*        /搜索结果页
+*/
+
+
+/*初始化样式*/
+@import url("../base/reset.css");
+/* 通用自定义样式 */
+@import url("base.css");
+
+.colorC00 {
+    color: #c00;
+}
+
+.bgC00 {
+    background: #c00;
+}
+
+.indent5 {
+    text-indent: 5px;
+}
+
+.submit {
+    padding: 0 10px;
+    height: 37px;
+    background: #034CB5;
+    color: #FFF;
+    border: none;
+    margin-right: 10px;
+}
+
+.wrap-changeLine {
+    display: inline-block;
+}
+
+/*搜索结果页*/
+.searchBox {
+    background: #FCFAFB;
+    border: 1px #EEEEEE solid;
+    overflow: hidden;
+}
+
+.searchMark {
+    height: 42px;
+    line-height: 42px;
+    border-bottom: 2px #034CB5 solid;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.searchLayout {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.searchLayout input {
+    font-family: 微软雅黑;
+    font-size: 14px;
+}
+
+.textInput {
+    width: 40%;
+    height: 35px;
+    border: #E7E7E7 1px solid;
+    line-height: 35px;
+}
+
+/*搜索结果列表样式*/
+.result {
+    text-align: left;
+    line-height: 30px;
+    padding-left: 5px;
+    font-size: 15px
+}
+
+/*高级搜索页样式*/
+
+.highSearch {
+    width: 80%;
+    margin: 30px auto 30px;
+}
+
+.highSearch h1 {
+    height: 50px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: normal;
+    border-bottom: 1px #ddd solid;
+}
+
+.highSearch h1 span {
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin: 10px 15px 10px 10px;
+    background: url("../../images/base/search.png") center no-repeat  #034CB5;
+    border-radius: 5px;
+}
+
+.select {
+    width: 13%;
+    height: 30px;
+    border: #E7E7E7 1px solid;
+    line-height: 35px;
+    font-family: 微软雅黑;
+    text-indent: 5px;
+}
+
+.input500 {
+    width: 65%;
+    height: 35px;
+    border: #E7E7E7 1px solid;
+    line-height: 35px;
+    font-family: 微软雅黑;
+    text-indent: 5px;
+}
+
+.timeInput {
+    width: 100%;
+    height: 30px;
+    border: #E7E7E7 1px solid;
+    line-height: 35px;
+    font-family: 微软雅黑;
+    text-indent: 5px;
+}
+
+.highSearch_submit {
+    width: 100%;
+    margin: 30px 0;
+    padding-left: 47%;
+}
+
+
+/*移动设备样式*/
+
+@media  screen and (max-device-width: 600px) {
+    .input500,.select,.textInput {
+        width: auto;
+    }
+    .searchBox {
+        border: none;
+    }
+    .wrap-changeLine {
+        width: 79%;
+        margin: 10px 0 15px;
+    }
+    .wrap-changeLine .submit {
+        float: right;
+        height: 30px;
+    }
+}

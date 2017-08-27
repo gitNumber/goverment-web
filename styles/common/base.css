@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+
+/* 此模块主要定义整站通用样式：
+* 全局居中
+* 通用颜色
+* 清除浮动
+* 自定义样式
+*/
+
+
+/*全局居中:
+/*全局居中样式
+* 修改 width 值可以修改页面整体的宽度
+*/
+.forCenter {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+/*媒体查询用于定义基本的wrap样式
+* 默认适配0-600px尺寸的屏幕,修改 max-device-width 值可修改适配上限
+*/
+
+@media screen and ( max-device-width: 600px ) {
+    .forCenter {
+        width: 100%;
+    }
+}
+
+/* 全局居中结束 */
+
+
+
+
+/* 通用颜色 */
+
+.red {
+    color: #CD0001;
+}
+
+.blue {
+    color: #1E61A5;
+}
+
+/* 通用颜色结束 */
+
+
+/* 清除浮动 */
+
+.clear:after {
+    content: '\20';
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.clear {
+    clear: both;
+    height: 0;
+    font: 0/0 Arial;
+    visibility: hidden;
+}
+
+/* 清除浮动结束 */
+
+
+
+
+/* 自定义样式 */
+
+body {
+    font-family: "微软雅黑", microsoft yahei;
+    font-size: 14px;
+    background: #fff;
+    color: #000;
+    /*overflow: scroll;*/
+}
+
+.goRight {
+    float: right;
+    _display: inline;
+}
+
+.more {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.more a {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.noMargin {
+    margin: 0 !important;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.menuIco li {
+    background: url("../../images/base/menuIco.png") 10px center no-repeat;
+    padding-left: 20px;
+}
+.listIco li {
+    background: url("../../images/base/listIco.png") 10px center no-repeat;
+    padding-left: 20px;
+}
+
+/* 自定义样式结束 */
+
+
+
+

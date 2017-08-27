@@ -1,0 +1,401 @@
+@charset "utf-8";
+
+/*
+* 通用内容页样式
+*/
+
+/*初始化样式*/
+@import url("../base/reset.css");
+/*通用样式*/
+@import url("base.css");
+
+
+
+.content {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.mark {
+    height: 2em;
+    float: left;
+    line-height: 2em;
+    margin-top: 1em;
+    margin-left: .3em;
+}
+.mark span {
+    float: left;
+    height: 2em;
+    margin-right: .1em;
+}
+.conMark1 {
+    background: #DFDFDF;
+    padding: 0 10px;
+}
+.conMark2 {
+    background: #1171BB;
+    padding: 0 10px;
+    color: #fff;
+}
+.conCut1 {
+    width: 12px;
+    height: 30px;
+    background: url("../../images/base/conMark1.png") no-repeat;
+}
+.conCut2 {
+    width: 12px;
+    height: 30px;
+    background: url("../../images/base/conMark2.png") no-repeat;
+}
+.conCut3 {
+    width: 12px;
+    height: 30px;
+    background: url("../../images/base/conMark3.png") no-repeat;
+}
+.contentBox {
+    padding: 30px 0;
+    margin-top: 38px;
+    position: relative;
+}
+.contentLeft {
+    height: auto;
+    overflow: hidden;
+}
+.contentLeft h1 {
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+    color: #000;
+    margin: 20px 0;
+}
+
+.contentRight {
+    width: 16%;
+    /*height: 700px;*/
+    float: right;
+    overflow: hidden;
+    margin-top: 40px;
+}
+.contentLeft .infoMark {
+    width: 95%;
+    min-height: 40px;
+    margin: 0 auto;
+    line-height:40px;
+    border-top: 2px #1F3653 solid;
+    text-align: center;
+}
+.contentLeft .infoMark span {
+    padding: 0 10px;
+    color: #666;
+    font-size: 15px;
+}
+.contentLeft .info {
+    width: 90%;
+    margin: 10px auto;
+    line-height: 35px;
+    font-size: 16px;
+}
+
+
+
+
+
+.others {
+    width:100%;
+    background: #eee;
+    padding: 1em 0;
+}
+.others a {
+    display: block;
+    width: 80%;
+    height: 2.5em;
+    line-height: 2.5em;
+    margin: 0 auto 10px;
+    text-align: center;
+    background: #1F3653;
+    color: #fff;
+    text-decoration: none;
+}
+.shareBox {
+    background: #eee;
+    padding-top: 30px;
+    margin-bottom: 10px;
+}
+.qrcode {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 30px auto;
+    padding: 10px;
+    background: #fff;
+}
+.qrcode img {
+}
+.share {
+    width: 160px;
+    height: 100px;
+    padding: 0 20px;
+}
+.narrow {
+    position: fixed;
+    width: 30px;
+    top: 50%;
+    right: 0;
+    z-index: 3;
+    display: none;
+    background: #1F3653;
+    color: #fff;
+    line-height: 25px;
+    padding: 10px;
+}
+.narrow:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.syNum  {
+    width: 95%;
+    margin: 0 auto;
+}
+.syNum td {
+    border-left: 1px #eee solid;
+    border-top: 1px #eee solid;
+    line-height: 40px;
+    padding-left: 10px;
+}
+.syNum table {
+    width: 100%;
+    border-right: 1px #eee solid;
+}
+.syNumTitle {
+    text-align: right;
+    color: #1F3653;
+    width: 150px;
+}
+.syNumCon {
+
+    width: 400px;
+}
+.syNumWide {
+    width: 950px;
+}
+.syNumTitleOnly {
+    width: 123px;
+    text-align: right;
+    color: #1F3653;
+}
+.syNumNoB {
+    border-bottom: 1px #eee solid;
+}
+
+/*内容表格样式*/
+.conForTable {
+    width: 95%;
+    margin: 10px auto;
+    position: relative;
+}
+.conCommonTable {
+    width: 100%;
+    border-top: 1px #eee solid;
+    border-left: 1px #eee solid;
+    font-size: 16px;
+}
+.conCommonTable td {
+    border-bottom: 1px #eee solid;
+    border-right: 1px #eee solid;
+    line-height: 30px;
+    padding: 5px 5px 10px 5px;
+}
+.conCommonTable td.conCommonTd {
+    text-align: right;
+    width: 150px;
+}
+.forConCut {
+    position: absolute;
+    width: 70px;
+    height: 3px;
+    top: 0;
+    left: 0;
+    background: #1171BB;
+}
+
+
+/*视频内容页*/
+.videoBox {
+    width: 650px;
+    margin: 0 auto;
+}
+
+/*搜索结果页*/
+.searchMark {
+    background: #F8F8F6;
+    border-bottom: 1px #EEE solid;
+    height: 37px;
+    border-top: 2px #1E61A5 solid;
+    line-height: 37px;
+    padding-left: 20px;
+}
+.searchClothes {
+    height: 30px;
+    overflow: hidden;
+}
+.search  {
+    width: 1090px;
+    overflow: hidden;
+    background: #FCFCFC;
+    padding: 50px;
+}
+.resultInput {
+    width: 300px;
+    height: 28px;
+    border: 1px #ccc solid;
+    float: left;
+}
+.resultButton1,.resultButton2 {
+    width: 100px;
+    height: 30px;
+    color: #fff;
+    background: #007DCF;
+    border: none;
+    margin-right: 10px;
+    float: left;
+}
+.resultButton2 {
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    float: left;
+}
+.resultButton2:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.keyWords {
+    background: #fff;
+    border: 1px  #eee solid;
+    margin: 10px 0 0 0;
+    line-height: 30px;
+    padding-left: 20px;
+}
+.keyWords span {
+    padding: 0 5px;
+}
+.result {
+    background: #fff;
+    border: 1px #eee solid;
+    border-bottom: none;
+    margin-top: 10px;
+}
+.result p {
+    border-bottom: 1px #eee solid;
+    line-height: 30px;
+    padding: 0 20px;
+}
+.result  .blue a {
+    color: #007DCF;
+}
+.searchResultPage {
+    background: #F8F8F8;
+    height: 30px;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+.searchResultPage a {
+    background: #eee;
+    padding: 0 5px;
+    line-height: 30px;
+}
+.conHotNews {
+    width: 200px;
+    height: 320px;
+    overflow: hidden;
+    margin-top: 10px;
+    background: #F8F8F6;
+}
+.conHotNews  h1 {
+    background: #1F3653;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    color: #fff;
+}
+.conHotNews ul {
+    padding: 6px 0;
+}
+.conHotNews li {
+    line-height: 30px;
+}
+
+/*网站地图*/
+
+.map {
+    margin-bottom: 15px;
+}
+
+.map_list {
+    margin-bottom: 7px;
+    background: #FCFBFB;
+    border: #EEEEEE 1px solid;
+}
+
+.map_list h1 {
+    height: 35px;
+    background: #F8F8F8;
+    border-bottom: #EEEEEE 1px solid;
+    position: relative;
+}
+
+.map_list h1 span {
+    display: inline-block;
+    line-height: 37px;
+    background: #1B80CE;
+    color: #fff;
+    padding: 0 40px;
+    font-weight: normal;
+    font-size: 15px;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+}
+
+.map_list h1 a {
+    color: #fff;
+}
+
+.map_list h3 {
+    line-height: 25px;
+    font-weight: normal;
+    background: #F8F8F8;
+    border-left: 3px #1B80CE solid;
+    margin: 10px auto 0;
+    width: 1100px;
+    padding-left: 20px;
+}
+
+.map_link {
+    border-top: none;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.map_link li {
+    float: left;
+}
+
+.map_link  a {
+    display: block;
+    line-height: 30px;
+    background: url("../../images/base/bmGkListIco.png") 5px center no-repeat;
+    padding: 0 20px;
+    margin: 5px 0  5px 20px;
+    width: 100px;
+    border-bottom: 1px #eee dashed;
+}
+
+.gk a{
+    width: 160px;
+}
+
+.map_link  a:hover {
+    background: #fff;
+    border-bottom: none;
+    line-height: 30px;
+    height: 31px;
+}

@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+/*初始化样式*/
+@import "../base/reset.css";
+/* 通用自定义样式 */
+@import "base.css";
+
+
+/* 此模块主要定义通用专题专栏模块样式：
+
+*专题专栏按年份分类列表
+*专题专栏列表页
+
+*/
+
+.ztzlWrapper,.ztzl-year-list {
+    margin-top: 10px;
+}
+
+.ztzlWrapper h1 {
+    background: #f8f8f8;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 2px #034CB5 solid;
+    font-weight: normal;
+    padding-left: 20px;
+}
+
+
+.ztzl-year-list h2 {
+    background: #f8f8f8;
+    height: 40px;
+    font-weight: normal;
+}
+
+.ztzl-year-list h2 span {
+    background: #034CB5;
+    display: inline-block;
+    padding: 0 30px;
+    color: #fff;
+    line-height: 40px;
+}
+
+.ztzl-year-layout {
+    overflow: hidden;
+    padding: 10px;
+    border: 1px #eee solid;
+    border-top: none;
+}
+
+.ztzl-year-layout li  {
+    background: url("../../images/base/bmGkListIco.png") 5px center  no-repeat;
+    padding-left: 15px;
+    line-height: 3em;
+    float: left;
+    width: 250px;
+}
+
+
+/* 移动设备兼容 */
+@media screen and ( max-device-width: 600px ) {
+    .ztzl-year-list {
+        width: 97%;
+        margin: 10px auto 0 auto;
+    }
+}

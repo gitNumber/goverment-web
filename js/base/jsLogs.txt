@@ -1,0 +1,14 @@
+
+js 资源目录：
+
+common           	                                     /叶签切换   日期   
+
+echarts-all         	   	                     /图表插件
+
+jquery.KinSlideshow  picCut_th   	     /图片切换效果
+
+jquery.KinSlideshow-1.2.1.min  picCut_mini    /对应图片效果库文件
+
+qrcode 				     /二维码插件
+
+starJs				     /自定义js方法
