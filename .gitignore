@@ -1,4 +1,7 @@
 # for ignore file
 .log
+<<<<<<< HEAD
 # commit test
 # more test
+=======
+>>>>>>> parent of a733131... add some new change
